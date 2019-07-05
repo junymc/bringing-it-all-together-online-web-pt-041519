@@ -53,11 +53,12 @@ class Dog
   end
 
   def self.new_from_db(row)
-    new_dog = self.new
-    new_dog.id = row[0]
-    new_dog.name = row[1]
-    new_dog.breed = row[2]
-    new_dog
+    attributes_hash = {
+      :id => row[0],
+      :name => row[1],
+      :breed => row[2]
+    }
+    self.new(attributes_hash)
   end
 
   def self.find_or_create_by
