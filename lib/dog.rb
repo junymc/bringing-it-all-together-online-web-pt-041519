@@ -40,7 +40,7 @@ class Dog
     dog = Dog.new(row)
     dog.save
     dog
-
+binding.pry
   end
 
 
